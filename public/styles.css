@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.inner-header {
+  height:80vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:10vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.center{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+   }
+body{
+  margin:0;
+}
+::selection{
+  color: #fff;
+  background: #43AFFC;
+}
+.wrapper{
+    width: 400px;
+    background:rgba(255,255,255,0.133);
+    color:#fff;
+    backdrop-filter: blur(3px);
+    border:2px solid white;
+    border-radius:7px ;
+    box-shadow: 0 0 6px 0 rgba(29,29,29,0.203);
+    z-index: 999;
+}
+.wrapper header{
+  display: flex;
+  font-size: 21px;
+  font-weight: 500;
+  color: #fff;
+  padding: 16px 15px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+header i{
+  font-size: 0em;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.wrapper.active header i{
+  margin-left: 5px;
+  font-size: 30px;
+}
+.wrapper .input-part{
+  margin: 20px 25px 30px;
+}
+.wrapper.active .input-part{
+  display: none;
+}
+.md-form label{
+  font-size: 130%;
+}
+.md-form input{
+  margin-top: 10px;
+}
+.input-part .info-txt{
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  /* margin-bottom: 15px; */
+}
+.input-part .info-txt.error{
+  color: #721c24;
+  display: block;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.input-part .info-txt.pending{
+  color: #0c5460;
+  display: block;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+.input-part :where(input, button){
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+}
+.input-part input{
+  text-align: center;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+}
+.input-part input:is(:focus, :valid){
+  border: 2px solid #43AFFC;
+}
+.input-part input::placeholder{
+  color: #bfbfbf;
+}
+.input-part .separator{
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  /* background: #ccc; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.separator::before{
+  content: "or";
+  color: #b3b3b3;
+  font-size: 19px;
+  padding: 0 15px;
+  
+}
+.input-part button{
+  color: #fff;
+  cursor: pointer;
+  background: #43AFFC;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+.input-part button:hover{
+  background: #1d9ffc;
+}
+
+
+@media (max-width: 768px) {
+  
+    .waves {
+      height:40px;
+      min-height:40px;
+    }}
+  @media(max-width:550px)
+  {
+    .wrapper{
+      width: 330px;
+    }
+  
+  }
