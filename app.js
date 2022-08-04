@@ -27,7 +27,6 @@ app.post("/", function (req, res) {
     console.log(response.statusCode);
     response.on("data", function (data) {
       const weatherData = JSON.parse(data);
-      console.log(weatherData);
       const country=weatherData.sys.country;
       const temp = weatherData.main.temp;
       const feelsLike=weatherData.main.feels_like;
