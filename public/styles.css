@@ -95,6 +95,7 @@ body{
 }
 .wrapper{
     width: 400px;
+    height: 250px;
     background:rgba(255,255,255,0.133);
     color:#fff;
     backdrop-filter: blur(3px);
